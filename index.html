@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Drone Flight Planner</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRPg6lNlwDXilLttiGD-eKvDuhy8qRbA0"></script>
+	</head>
+	<body>
+		<div class="row">
+			<div class="navbar col s12">
+				<nav class="grey darken-3">
+					<div class="container">
+						<a class="brand-logo">Drone Flight Planner</a>
+					</div>
+				</nav>
+			</div>
+
+			<div class="col s12 m9">
+				<div id="map">
+					<h2>Map</h2>
+				</div>
+			</div>
+
+			<div class="col s12 m3">
+				<div class="newFP">
+					<h4>New plan</h4>
+					<form id="addNewFlightPlan">
+						<label for="title">Title:</label>
+						<input type="text" id="title" name="title" placeholder="Flight 1" required />
+						<input type="submit" value="Save plan" id="saveNewFlight" class="btn-small disabled" />
+					</form>
+				</div>
+
+				<div class="resetFP">
+					<h4>Reset map</h4>
+					<button class="btn-small disabled" id="resetPlan">Reset</button>
+				</div>
+
+				<div class="existingFP">
+					<h4>Existing plans:</h4>
+					<p class="planCounter"></p>
+					<div class="planList collection"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="init.js"></script>
+	</body>
+</html>

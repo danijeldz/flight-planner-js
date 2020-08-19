@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+#map {
+	width: 100%;
+	height: 90vh;
+}
+.planList {
+	height: 50vh;
+	overflow: auto;
+}
+
+@media only screen and (max-width: 600px) {
+	#map {
+		height: 50vh;
+	}
+	.planList {
+		height: 50vh;
+	}
+}
